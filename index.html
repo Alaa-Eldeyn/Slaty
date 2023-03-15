@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slaty</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Cairo Font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css"> <!-- Render all elements normally -->
+  <link rel="stylesheet" href="css/all.min.css"> <!-- Font Awesome -->
+  <link rel="stylesheet" href="css/bootstrap.min.css"> <!-- Bootstrap -->
+  <link rel="stylesheet" href="css/main.css"> <!-- Main Style -->
+</head>
+<body>
+  <header class="d-flex justify-content-center align-items-center">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+      <div class="account">
+        <i class="fa-solid fa-location-crosshairs fs-4 me-2 me-lg-3 ms-lg-3"></i>
+        <i class="fa-solid fa-language fs-4"></i>
+      </div>
+      <div class="logo d-flex align-items-center gap-2">
+        <h2 class="fw-bold">صلاتى</h2>
+        <img class="img-fluid" src="imgs/Logo.png" alt="Logo">
+      </div>
+      <button class="navbar-toggler me-lg-4 me-md-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#sideBar">
+        <i class="fa-solid fa-bars fs-4"></i>
+      </button>
+    </div>
+  </header>
+  <div id="sideBar" class="offcanvas offcanvas-end" tabindex="-1">
+    <ul class="nav flex-column align-items-center justify-content-center position-absolute sidebar">
+      <li class="nav-item">
+        <a class="nav-link d-flex flex-column align-items-center mb-2 mt-2 mt-lg-0 text-dark" href="index.html">
+          <img src="imgs/mosque.png" alt="Mosque">
+          مواعيد الصلاة</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link d-flex flex-column align-items-center mb-2 mt-2 text-dark" href="">
+          <img src="imgs/worldwide.png" alt="Locations">
+          المدن والدول</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link d-flex flex-column align-items-center mb-2 mt-2 text-dark" href="">
+          <img src="imgs/gear.png" alt="Setting">
+          الإعدادات</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link d-flex flex-column align-items-center mb-2 mt-2 text-dark" href="contact.html">
+          <img src="imgs/email.png" alt="Contact us">
+          اتصل بي</a>
+      </li>
+    </ul>
+  </div>
+  <div class="main-content mt-5 fw-bold">
+    <div class="container">
+      <div class="card text-center p-4 text-light">
+        <div class="todayDate mb-3 fs-5"></div>
+        <div class="currentLocation fs-5">
+          &nbsp;<i class="fa-solid fa-location-dot"></i>
+        </div>
+        <div class="row mb-5 mt-5 row-gap-3">
+          <!-- <div class="col-12 col-md-6">
+            <p class="mb-1">الوقت المتبقى للصلاة القادمة</p>
+            <span>- 00:00:00</span>
+          </div> -->
+          <div class="col-12 fs-2">
+            <p class="mb-1">الوقت الآن</p>
+            <span id="timeNow">00:00:00</span>
+          </div>
+        </div>
+        <div class="row row-gap-3" style="direction: rtl">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+            <p class="mb-1">الفجر</p>
+            <span id="fajr">00:00:00</span>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+            <p class="mb-1">الشروق</p>
+            <span id="sunrise">00:00:00</span>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+            <p class="mb-1">الظهر</p>
+            <span id="dhuhr">00:00:00</span>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+            <p class="mb-1">العصر</p>
+            <span id="asr">00:00:00</span>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+            <p class="mb-1">المغرب</p>
+            <span id="maghrib">00:00:00</span>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+            <p class="mb-1">العشاء</p>
+            <span id="isha">00:00:00</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/all.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/slaty.js"></script>
+</body>
+</html>

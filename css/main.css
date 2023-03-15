@@ -1,0 +1,77 @@
+*, *::after, *::before, h1, h2, h3, h4, h5, h6{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root{
+  --mainColor: #14213d;
+  --secondColor: #fca311;
+  --mainTransition: .2s;
+}
+body{
+  background-color: #efefef;
+  font-family: 'Cairo', sans-serif;
+}
+header{
+  background-color: #fff;
+  height: 80px;
+}
+header .logo img{
+  max-width: 70px;
+}
+header .account i, header .account svg{
+  cursor: pointer;
+  transition: var(--mainTransition);
+}
+header .account i:hover, header .account svg:hover{
+  color: var(--secondColor);
+}
+@media (max-width: 400px){
+  header .account i, header .account svg{
+    font-size: 1rem !important;
+  }
+  header .logo img{
+    max-width: 50px;
+  }
+  header .logo h2{
+    font-size: 1.3rem !important;
+  }
+}
+#sideBar{
+  max-width: 150px;
+}
+.sidebar{
+  background-color: #fff;
+  height: calc(100vh - 80px);
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+}
+.sidebar li{
+  width: 100%;
+  transition: var(--mainTransition);
+}
+.sidebar li:hover{
+  background-color: #eee
+}
+.sidebar li img{
+  max-width: 50px;
+}
+.main-content .card{
+  background-image: url(../imgs/circle-scatter-haikei.svg);
+}
+.social i, .social svg{
+  cursor: pointer;
+  transition: var(--mainTransition);
+  color: #222;
+}
+.social i:hover, .social svg:hover{
+  transform: scale(1.2);
+}
+.social .linkedin{
+  color: #0A66C2;
+}
+.social .instagram{
+  color: #d62976;
+}
