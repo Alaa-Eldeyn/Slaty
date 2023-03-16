@@ -15,7 +15,7 @@ function showPosition(position) {
 
 function getData() {
   // Fetch timings with geoLocation (Google)
-  fetch(`http://api.aladhan.com/v1/timings/:date?latitude=${lat}&longitude=${long}&method=4`, {method : "GET"})
+  fetch(`https://api.aladhan.com/v1/timings/:date?latitude=${lat}&longitude=${long}&method=4`, {method : "GET"})
     .then(response => response.json())
     .then(response => {
       document.querySelector(".todayDate").textContent = response.data.date.readable;
